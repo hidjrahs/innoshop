@@ -3,7 +3,8 @@ window.axios = axios;
 
 import $ from 'jquery';
 window.$ = window.jquery = $;
-window.jQuery = require('jquery');
+import jQuery from 'jquery';
+window.jQuery = jQuery;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 window.axios.defaults.headers.common['CSRF-TOKEN'] = $('meta[name="csrf-token"]').attr('content');
